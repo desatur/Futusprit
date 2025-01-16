@@ -1,10 +1,18 @@
 ﻿using System.Numerics;
 using Raylib_cs;
 
-namespace Futusprit
+namespace Futusprit.Graphics
 {
     public class Camera : IDisposable
     {
+        public Camera2D Base
+        {
+            get
+            {
+                return _baseCamera;
+            }
+        }
+
         public static List<Camera> Cameras
         {
             get
@@ -22,14 +30,6 @@ namespace Futusprit
             set
             {
                 _default = value;
-            }
-        }
-
-        public Camera2D Base
-        {
-            get
-            {
-                return _baseCamera;
             }
         }
 
