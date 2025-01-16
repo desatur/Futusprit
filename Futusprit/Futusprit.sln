@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futusprit", "Futusprit\Futusprit.csproj", "{46A3DE08-7384-455B-B769-3A93987DDE70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FutuspritTests", "FutuspritTests\FutuspritTests.csproj", "{08050B23-ED8D-42DB-8FCB-DCBC6D42708C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46A3DE08-7384-455B-B769-3A93987DDE70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46A3DE08-7384-455B-B769-3A93987DDE70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46A3DE08-7384-455B-B769-3A93987DDE70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46A3DE08-7384-455B-B769-3A93987DDE70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08050B23-ED8D-42DB-8FCB-DCBC6D42708C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08050B23-ED8D-42DB-8FCB-DCBC6D42708C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08050B23-ED8D-42DB-8FCB-DCBC6D42708C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08050B23-ED8D-42DB-8FCB-DCBC6D42708C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E54323E-3BB4-4DD2-8691-1FD959BA9332}
+	EndGlobalSection
+EndGlobal
