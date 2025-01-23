@@ -69,7 +69,6 @@ namespace Futusprit
                 _deltaTime = Raylib.GetFrameTime();
                 ApplicationLoop();
 
-                // Rendering code on the main thread
                 Raylib.BeginDrawing();
                 Raylib.ClearBackground(Color.Black);
                 Raylib.BeginMode2D(Camera.Default.Base);
@@ -86,14 +85,14 @@ namespace Futusprit
         private void DrawDebug()
         {
             Raylib.EndMode2D();
-            var debugInfo = new List<string>
-            {
+            List<string> debugInfo =
+            [
                 $"Application Name: {_launchArgs.ApplicationName}",
-                $"Delta Time: {_deltaTime:F4}s",
+                $"Delta Time: {_deltaTime} | {_deltaTime:F4}s",
                 $"FPS: {Raylib.GetFPS()}",
                 $"Screen Width: {Raylib.GetScreenWidth()}px",
                 $"Screen Height: {Raylib.GetScreenHeight()}px"
-            };
+            ];
             Raylib.DrawText("Debug:\n   " + string.Join("\n   ", debugInfo), 10, 10, 2, Color.Green);
         }
 #endif

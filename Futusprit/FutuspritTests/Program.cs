@@ -6,7 +6,7 @@ namespace FutuspritTests
     {
         static void Main()
         {
-            var engine = new TestGame
+            var engine = new Test
             {
                 ApplicationInitArgs = new Futusprit.ApplicationInitArgs()
                 {
@@ -18,7 +18,7 @@ namespace FutuspritTests
         }
     }
 
-    internal class TestGame : Futusprit.Futusprit
+    internal class Test : Futusprit.Futusprit
     {
         private float rectX = 100;
         private float rectY = 100;
@@ -26,11 +26,10 @@ namespace FutuspritTests
 
         public override void ApplicationLoop()
         {
-            // Update rectangle position
-            if (Raylib.IsKeyDown(KeyboardKey.Right)) rectX += 5 * DeltaTime * 25;  // Move right
-            if (Raylib.IsKeyDown(KeyboardKey.Left)) rectX -= 5 * DeltaTime * 25;   // Move left
-            if (Raylib.IsKeyDown(KeyboardKey.Up)) rectY -= 5 * DeltaTime * 25;     // Move up
-            if (Raylib.IsKeyDown(KeyboardKey.Down)) rectY += 5 * DeltaTime * 25;   // Move down
+            if (Raylib.IsKeyDown(KeyboardKey.Right)) rectX += 5 * DeltaTime * 100;  // Move right
+            if (Raylib.IsKeyDown(KeyboardKey.Left)) rectX -= 5 * DeltaTime * 100;   // Move left
+            if (Raylib.IsKeyDown(KeyboardKey.Up)) rectY -= 5 * DeltaTime * 100;     // Move up
+            if (Raylib.IsKeyDown(KeyboardKey.Down)) rectY += 5 * DeltaTime * 100;   // Move down
             Raylib.DrawRectangle((int)rectX, (int)rectY, (int)rectSize, (int)rectSize, Color.Red);
         }
     }
