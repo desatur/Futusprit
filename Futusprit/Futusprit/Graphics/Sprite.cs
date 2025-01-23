@@ -103,7 +103,7 @@ namespace Futusprit.Graphics
             _sprites.Add(this);
         }
 
-        private byte[] GetTextureBytes(object textureSource)
+        private static byte[] GetTextureBytes(object textureSource)
         {
             if (textureSource is byte[] byteArray)
             {
