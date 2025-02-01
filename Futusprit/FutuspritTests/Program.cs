@@ -1,36 +1,27 @@
-﻿using Raylib_cs;
-
-namespace FutuspritTests
+﻿namespace FutuspritTests
 {
     internal class Program
     {
         static void Main()
         {
-            var engine = new Test
+            var pong = new Pong
             {
-                ApplicationInitArgs = new Futusprit.ApplicationInitArgs()
+                ApplicationInitArgs = new()
                 {
-                    ApplicationName = "FutuspritTestsApp",
-                    WindowTitle = "FutuspritTests"
+                    ApplicationName = "FutuspritTestsApp_pong",
+                    WindowTitle = "Pong"
                 }
             };
-            engine.Launch();
-        }
-    }
-
-    internal class Test : Futusprit.Futusprit
-    {
-        private float rectX = 100;
-        private float rectY = 100;
-        private const float rectSize = 50;
-
-        public override void ApplicationLoop()
-        {
-            if (Raylib.IsKeyDown(KeyboardKey.Right)) rectX += 5 * DeltaTime * 100;  // Move right
-            if (Raylib.IsKeyDown(KeyboardKey.Left)) rectX -= 5 * DeltaTime * 100;   // Move left
-            if (Raylib.IsKeyDown(KeyboardKey.Up)) rectY -= 5 * DeltaTime * 100;     // Move up
-            if (Raylib.IsKeyDown(KeyboardKey.Down)) rectY += 5 * DeltaTime * 100;   // Move down
-            Raylib.DrawRectangle((int)rectX, (int)rectY, (int)rectSize, (int)rectSize, Color.Red);
+            var cursor = new CursorTest
+            {
+                ApplicationInitArgs = new()
+                {
+                    ApplicationName = "FutuspritTestsApp_cursor",
+                    WindowTitle = "Cursor Test"
+                }
+            };
+            //pong.Launch();
+            cursor.Launch();
         }
     }
 }

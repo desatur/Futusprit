@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using Futusprit.Windowing;
 using Raylib_cs;
 
 namespace Futusprit.Graphics
@@ -44,11 +45,11 @@ namespace Futusprit.Graphics
                 Raylib.ClearBackground(BackgroundColor);
 
                 Vector2 centerPosition = new(
-                    (1920 - _vignetteSplash.Size.Y) / 2,
-                    (1080 - _vignetteSplash.Size.X) / 2
+                    (PresentationWindow.Singleton.Width - _vignetteSplash.Size.Y) / 2,
+                    (PresentationWindow.Singleton.Height - _vignetteSplash.Size.X) / 2
                 );
 
-                _vignetteSplash.Draw(centerPosition, Color.White);
+                //_vignetteSplash.Draw(centerPosition, Color.White);
 
 #if DEBUG
                 if (true)
@@ -58,7 +59,7 @@ namespace Futusprit.Graphics
                 {
                     string text = "Loading...";
                     int textWidth = Raylib.MeasureText(text, 40);
-                    int textHeight = 40;
+                    int textHeight = 80;
                     int x = (Raylib.GetScreenWidth() - textWidth) / 2;
                     int y = (Raylib.GetScreenHeight() - textHeight) / 2 + 250;
 
