@@ -11,9 +11,6 @@ namespace FutuspritTests
             Cursor.Visible = false;
         }
 
-        public override void ApplicationRenderingLoop()
-        {
-            
-        }
+        //public override void ApplicationRenderingLoop() {}
     }
 }
