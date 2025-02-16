@@ -1,4 +1,6 @@
-﻿namespace Futusprit.Windowing
+﻿using System.Numerics;
+
+namespace Futusprit.Windowing
 {
     public struct WindowResolution
     {
@@ -19,6 +21,6 @@
             Height = y;
         }
 
-        public WindowResolution(Vector2Int vec) : this(vec.X, vec.Y) { }
+        public WindowResolution(Vector2 vec) : this((int)vec.X, (int)vec.Y) { }
     }
 }

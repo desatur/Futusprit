@@ -11,7 +11,9 @@
         public void Dispose()
         {
             Windows.Remove(this);
+            GC.SuppressFinalize(this);
         }
+
         public static void DisposeAll()
         {
             foreach (var win in Windows)

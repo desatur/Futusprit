@@ -3,7 +3,7 @@ using Raylib_cs;
 
 namespace Futusprit.Windowing
 {
-    public class PresentationWindow : IDisposable
+    public class PresentationWindow : IDisposable // TODO: Resolution manager
     {
         public static PresentationWindow Singleton { get; private set; }
         public static List<WindowResolution> SupportedResolutions { get; private set; }
@@ -40,14 +40,14 @@ namespace Futusprit.Windowing
                 UpdateWindowTitle();
             }
         }
-        public ushort Width
+        public ushort Width // TODO: Resolution manager
         {
             get
             {
                 return 512;
             }
         }
-        public ushort Height
+        public ushort Height // TODO: Resolution manager
         {
             get
             {

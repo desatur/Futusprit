@@ -2,7 +2,7 @@
 {
     public class ComponentManager
     {
-        private Dictionary<Type, Dictionary<uint, object>> components = new();
+        private Dictionary<Type, Dictionary<uint, object>> components = [];
 
         public void AddComponent<T>(uint entity, T component)
         {

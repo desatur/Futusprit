@@ -13,9 +13,9 @@
             ComponentManager = new ComponentManager();
         }
 
-        public void Update(float deltaTime)
-        {
+        //public void Update()
+        //{
 
-        }
+        //}
     }
 }

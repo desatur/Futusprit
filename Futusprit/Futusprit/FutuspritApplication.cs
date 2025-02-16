@@ -50,12 +50,11 @@ namespace Futusprit
         private bool _isRunning = false;
         private StartupSplashScreen _startupSplashScreen;
 
-        private bool _shouldRender = false;
         private static ECS _ecs;
 
         public FutuspritApplication()
         {
-
+            // TODO: ???????????????????
         }
 
         public void Launch()

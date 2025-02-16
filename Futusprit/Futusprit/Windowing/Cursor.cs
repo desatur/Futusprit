@@ -54,8 +54,9 @@ namespace Futusprit.Windowing
             }
         }
 
-        private void DrawCustomCursor()
+        internal void DrawCustomCursor()
         {
+            throw new NotImplementedException();
         }
 
         /// <summary>
