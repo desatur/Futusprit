@@ -54,20 +54,17 @@ namespace Futusprit.Windowing
             }
         }
 
-        public static void LockToWindow()
-        {
-            Raylib.DisableCursor();
-            _bound = true;
-        }
-
-        public static void UnlockFromWindow()
-        {
-            Raylib.EnableCursor();
-            _bound = false;
-        }
-
         private void DrawCustomCursor()
         {
+        }
+
+        /// <summary>
+        /// Note (desatur): Not the best method to make sure everything is okay.
+        /// </summary>
+        internal static void Apply()
+        {
+            if (Bound) { Raylib.DisableCursor(); } else { Raylib.EnableCursor(); }
+            if (Visible) { Raylib.ShowCursor(); } else { Raylib.HideCursor(); }
         }
     }
 }

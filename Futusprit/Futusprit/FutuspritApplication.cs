@@ -82,6 +82,7 @@ namespace Futusprit
         {
             _startupSplashScreen.BeginDisplay();
             _ = new Camera();
+            Cursor.Apply();
 
             while (!_isRunning || !Raylib.WindowShouldClose())
             {

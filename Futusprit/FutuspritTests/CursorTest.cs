@@ -8,11 +8,12 @@ namespace FutuspritTests
         public CursorTest()
         {
             Cursor.Bound = true;
+            Cursor.Visible = false;
         }
 
         public override void ApplicationRenderingLoop()
         {
-
+            
         }
     }
 }
